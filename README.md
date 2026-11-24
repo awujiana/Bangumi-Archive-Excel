@@ -6,9 +6,37 @@
 [![Format](https://img.shields.io/badge/格式-JSONL%20%2B%20gzip-2da44e)](#sec-5)
 
 [![Data Update](https://img.shields.io/badge/更新频率-每周三-2da44e.svg)](https://github.com/bangumi/Archive)
-[![Last Update](https://img.shields.io/badge/更新日期-2026--11--17-2da44e.svg)](data/anime/anime.manifest.json)
-[![Records](https://img.shields.io/badge/记录数-31312-2da44e.svg)](data/anime/anime.manifest.json)
 [![Stars](https://img.shields.io/github/stars/awujiana/Bangumi-Archive-Excel?label=Stars&color=2da44e)](https://github.com/awujiana/Bangumi-Archive-Excel/stargazers)
+
+<!-- BADGE:manga -->
+[![manga records](https://img.shields.io/badge/manga%20records-425715-8250df.svg)](data/manga/manga.manifest.json)
+[![manga updated](https://img.shields.io/badge/manga%20updated-2026--11--17-8250df.svg)](data/manga/manga.manifest.json)
+[![manga size](https://img.shields.io/badge/manga%20size-125MB-8250df.svg)](data/manga/manga.manifest.json)
+<!-- /BADGE:manga -->
+
+<!-- BADGE:anime -->
+[![anime records](https://img.shields.io/badge/anime%20records-31312-1f6feb.svg)](data/anime/anime.manifest.json)
+[![anime updated](https://img.shields.io/badge/anime%20updated-2026--11--17-1f6feb.svg)](data/anime/anime.manifest.json)
+[![anime size](https://img.shields.io/badge/anime%20size-22MB-1f6feb.svg)](data/anime/anime.manifest.json)
+<!-- /BADGE:anime -->
+
+<!-- BADGE:music -->
+[![music records](https://img.shields.io/badge/music%20records-101575-bf8700.svg)](data/music/music.manifest.json)
+[![music updated](https://img.shields.io/badge/music%20updated-2026--11--17-bf8700.svg)](data/music/music.manifest.json)
+[![music size](https://img.shields.io/badge/music%20size-28MB-bf8700.svg)](data/music/music.manifest.json)
+<!-- /BADGE:music -->
+
+<!-- BADGE:game -->
+[![game records](https://img.shields.io/badge/game%20records-119444-d29922.svg)](data/game/game.manifest.json)
+[![game updated](https://img.shields.io/badge/game%20updated-2026--11--17-d29922.svg)](data/game/game.manifest.json)
+[![game size](https://img.shields.io/badge/game%20size-62MB-d29922.svg)](data/game/game.manifest.json)
+<!-- /BADGE:game -->
+
+<!-- BADGE:real -->
+[![real records](https://img.shields.io/badge/real%20records-26976-1a7f37.svg)](data/real/real.manifest.json)
+[![real updated](https://img.shields.io/badge/real%20updated-2026--11--17-1a7f37.svg)](data/real/real.manifest.json)
+[![real size](https://img.shields.io/badge/real%20size-16MB-1a7f37.svg)](data/real/real.manifest.json)
+<!-- /BADGE:real -->
 
 <h1>Bangumi 全类型存档数据</h1>
 <h2>Bangumi-Archive-Excel</h2>
