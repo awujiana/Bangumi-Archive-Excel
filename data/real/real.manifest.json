@@ -1,0 +1,99 @@
+{
+  "formatVersion": 1,
+  "subjectType": 6,
+  "typeLabel": "real",
+  "updatedAt": "2026-11-17",
+  "recordCount": 26976,
+  "shards": [
+    {
+      "name": "base",
+      "file": "real.base.jsonlines.gz",
+      "fields": [
+        "sid",
+        "name",
+        "name_original",
+        "updatedAt",
+        "date",
+        "meta_tags",
+        "nsfw"
+      ],
+      "bytes": 955795,
+      "sha256": "f517070ba60b959c0a7063b033d81b5302e1358b32fbcccff9472ac4f4558bf2"
+    },
+    {
+      "name": "meta",
+      "file": "real.meta.jsonlines.gz",
+      "fields": [
+        "sid",
+        "播放结束",
+        "动画制作公司",
+        "话数",
+        "片长",
+        "制片国家",
+        "语言",
+        "类型",
+        "导演",
+        "音乐",
+        "人物设定",
+        "机械设定",
+        "原作",
+        "脚本",
+        "分镜",
+        "演出",
+        "原案",
+        "系列构成",
+        "在线播放平台",
+        "别名"
+      ],
+      "bytes": 1003501,
+      "sha256": "1cd6c78bf4353266e04fdc44dc41afc2966ba1354640a5abee44d7ffea2e8f3d"
+    },
+    {
+      "name": "relations",
+      "file": "real.relations.jsonlines.gz",
+      "fields": [
+        "sid",
+        "关联条目ID",
+        "关联的动漫ID"
+      ],
+      "bytes": 239497,
+      "sha256": "127cbdd69a0fa57440aa2fa5f7aad3815a9c9ea39f5c4201ad466138bc9546f4"
+    },
+    {
+      "name": "stats",
+      "file": "real.stats.jsonlines.gz",
+      "fields": [
+        "sid",
+        "platform",
+        "series",
+        "score",
+        "rank",
+        "score_details",
+        "favorite",
+        "tags"
+      ],
+      "bytes": 734820,
+      "sha256": "577f8e78e04a8613393095ba8bf8cc00b21d52590cfb612dbbc2c7ba55c716ac"
+    },
+    {
+      "name": "summary",
+      "file": "real.summary.jsonlines.gz",
+      "fields": [
+        "sid",
+        "summary"
+      ],
+      "bytes": 9298944,
+      "sha256": "9b36611e031f9a2ede3373a7d80083265865b222a135d35af5efcc76ed3c042d"
+    },
+    {
+      "name": "infobox",
+      "file": "real.infobox.jsonlines.gz",
+      "fields": [
+        "sid",
+        "infobox"
+      ],
+      "bytes": 5046350,
+      "sha256": "7b2d60241540a1d6da8f47ca219d0eca4a9181c5d86cabd7367bd98104977a72"
+    }
+  ]
+}
