@@ -94,13 +94,21 @@ Archive 项目 (处理 dump、生成 Excel 与差异)
         ↓ raw URL
 BGM 插件 (读取 JSONL → 写入 Excel → 同步 Bangumi API)
 ```
-本项目的 Releases 页面仅包含以下三类 Excel 文件：
+本项目的 Releases 页面按条目类型分开发布，每个类型各包含以下三类 Excel 文件：
 
 | 文件名 | 类型 | 说明 |
 |--------|------|------|
-| `ani-bangumi-type2-YYYY-MM-DD.xlsx` | 主数据文件 | 完整原始导出字段（75 列），按日期归档的全量动画条目数据 |
-| `type2_subject_YYMMDD_vs_YYMMDD.xlsx` | 差异对比文件 | 相邻期次之间的差异记录（新增、删除、修改），命名格式为「新日期_vs_旧日期」 |
-| `ani-bangumi-type2-YYYY-MM-DD-template.xlsx` | 模板转换文件 | 在主数据文件基础上精简的 42 列模板，面向用户填写收藏信息 |
+| `ani-bangumi-typeN-YYYY-MM-DD.xlsx` | 主数据文件 | 完整原始导出字段（75 列），按日期归档的该类型全量条目数据 |
+| `typeN_subject_YYMMDD_vs_YYMMDD.xlsx` | 差异对比文件 | 相邻期次之间的差异记录（新增、删除、修改），命名格式为「新日期_vs_旧日期」 |
+| `ani-bangumi-typeN-YYYY-MM-DD-template.xlsx` | 模板转换文件 | 在主数据文件基础上精简的 42 列模板，面向用户填写收藏信息 |
+
+| 类型 | type | Release tag | 示例（2026-11-17 期） |
+|------|------|-------------|----------------------|
+| 漫画 | 1 | `manga-YYYY.MM.DD` | [manga-2026.11.17](../../releases/tag/manga-2026.11.17) |
+| 动画 | 2 | `YYYY.MM.DD`（沿用历史） | [2026.11.17](../../releases/tag/2026.11.17) |
+| 音乐 | 3 | `music-YYYY.MM.DD` | [music-2026.11.17](../../releases/tag/music-2026.11.17) |
+| 游戏 | 4 | `game-YYYY.MM.DD` | [game-2026.11.17](../../releases/tag/game-2026.11.17) |
+| 三次元 | 6 | `real-YYYY.MM.DD` | [real-2026.11.17](../../releases/tag/real-2026.11.17) |
 
 <a id="sec-2"></a>
 
