@@ -6,14 +6,14 @@
 [![Format](https://img.shields.io/badge/格式-JSONL%20%2B%20gzip-2da44e)](#sec-5)
 
 [![Data Update](https://img.shields.io/badge/更新频率-每周三-2da44e.svg)](https://github.com/bangumi/Archive)
-[![Last Update](https://img.shields.io/badge/更新日期-2026--11--17-2da44e.svg)](data/anime.manifest.json)
-[![Records](https://img.shields.io/badge/记录数-31312-2da44e.svg)](data/anime.manifest.json)
-[![Stars](https://img.shields.io/github/stars/awujiana/Bangumi-Archive-Anime-Excel?label=Stars&color=2da44e)](https://github.com/awujiana/Bangumi-Archive-Anime-Excel/stargazers)
+[![Last Update](https://img.shields.io/badge/更新日期-2026--11--17-2da44e.svg)](data/anime/anime.manifest.json)
+[![Records](https://img.shields.io/badge/记录数-31312-2da44e.svg)](data/anime/anime.manifest.json)
+[![Stars](https://img.shields.io/github/stars/awujiana/Bangumi-Archive-Excel?label=Stars&color=2da44e)](https://github.com/awujiana/Bangumi-Archive-Excel/stargazers)
 
-<h1>Bangumi 动画存档数据</h1>
-<h2>Bangumi-Archive-Anime-Excel</h2>
+<h1>Bangumi 全类型存档数据</h1>
+<h2>Bangumi-Archive-Excel</h2>
 
-<strong>Bangumi 动画存档数据下发仓库 · 提供 JSONL 分片数据源与每周差异摘要，供 My Bangumi Database for WPS 插件免 token 同步</strong>
+<strong>Bangumi 全类型存档数据下发仓库 · 动画/漫画/音乐/游戏/三次元五类 JSONL 分片数据源与每周差异摘要，供 My Bangumi Database for WPS 插件免 token 同步</strong>
 
 </div>
 
@@ -43,6 +43,18 @@
 
 本仓库是 [Bangumi Archive](https://github.com/bangumi/Archive) 数据处理链路的**数据下发仓库**，由上游 Archive 项目 每周处理后同步而来。
 
+> **五类数据（2026-11-24 起合并）**：原五个独立数据仓库（Anime / Manga / Music / Game / Real）已合并为本仓库，按类型分子目录存放。Bangumi 有效类型为 **1/2/3/4/6（无 type=5）**，每类都是独立的「6 分片 + 清单」契约，互不影响。
+
+| 类型 | 条目 | 数据目录 | 清单地址 | 本期记录数 |
+|------|------|----------|----------|-----------|
+| 1 | 漫画 Manga | `data/manga/` | [manga.manifest.json](data/manga/manga.manifest.json) | 425,715 |
+| 2 | 动画 Anime | `data/anime/` | [anime.manifest.json](data/anime/anime.manifest.json) | 31,312 |
+| 3 | 音乐 Music | `data/music/` | [music.manifest.json](data/music/music.manifest.json) | 101,575 |
+| 4 | 游戏 Game | `data/game/` | [game.manifest.json](data/game/game.manifest.json) | 119,444 |
+| 6 | 三次元 Real | `data/real/` | [real.manifest.json](data/real/real.manifest.json) | 26,976 |
+
+> 下方的字段说明以**动画（type=2）**为例；其余类型沿用相同的分片契约（片名前缀换成对应标签），字段按各自 dump 结构而定。
+
 **数据链路**：
 
 ```
@@ -50,7 +62,7 @@ Bangumi 官方 Archive (每周三 dump)
         ↓
 Archive 项目 (处理 dump、生成 Excel 与差异)
         ↓ step09_build_jsonl.py + step10_sync_diff.py + push_data_repository.py
-本仓库 (Bangumi-Archive-Anime-Excel)
+本仓库 (Bangumi-Archive-Excel)
         ↓ raw URL
 BGM 插件 (读取 JSONL → 写入 Excel → 同步 Bangumi API)
 ```
@@ -92,31 +104,38 @@ BGM 插件 (读取 JSONL → 写入 Excel → 同步 Bangumi API)
 ## 📂 目录结构
 
 ```
-Bangumi-Archive-Anime-Excel/
-├── data/                                # BGM 插件数据源（~22 MB，31312 条，gzip，共 6 片）
-│   ├── anime.manifest.json              # 清单：各片文件名/字段/大小/哈希（插件先读它）
-│   ├── anime.base.jsonlines.gz          # 基础字段（7 列，~1.1 MB）
-│   ├── anime.meta.jsonlines.gz          # infobox 解析扩展（20 列，~2.0 MB）
-│   ├── anime.relations.jsonlines.gz     # 关联条目 ID（3 列，~0.4 MB）
-│   ├── anime.stats.jsonlines.gz         # 平台/系列/评分/排名/收藏/标签（8 列，~1.6 MB）
-│   ├── anime.summary.jsonlines.gz       # 简介（2 列，~7.8 MB）
-│   └── anime.infobox.jsonlines.gz       # infobox 原文（2 列，~8.4 MB）
-├── differences/                         # 差异摘要（每周对比）
-│   ├── 2026-07-21_to_2026-07-28/
-│   │   ├── diff_report.html             # 差异报告（浏览器可读）
-│   │   ├── diff_summary.json            # 差异统计
-│   │   ├── type2_subject_*_added.jsonlines      # 新增条目
-│   │   ├── type2_subject_*_deleted.jsonlines    # 删除条目
-│   │   └── 差异数据_type2_*.html         # 差异可视化
-│   └── 2026-07-28_to_2026-08-04/
-│       └── ...
+Bangumi-Archive-Excel/
+├── data/                                # BGM 插件数据源，按类型分子目录
+│   ├── anime/                           # 动画 type=2（31312 条，~22 MB）
+│   │   ├── anime.manifest.json          # 清单：各片文件名/字段/大小/哈希（插件先读它）
+│   │   ├── anime.base.jsonlines.gz      # 基础字段（7 列，~1.1 MB）
+│   │   ├── anime.meta.jsonlines.gz      # infobox 解析扩展（20 列，~2.0 MB）
+│   │   ├── anime.relations.jsonlines.gz # 关联条目 ID（3 列，~0.4 MB）
+│   │   ├── anime.stats.jsonlines.gz     # 平台/系列/评分/排名/收藏/标签（8 列，~1.6 MB）
+│   │   ├── anime.summary.jsonlines.gz   # 简介（2 列，~7.8 MB）
+│   │   └── anime.infobox.jsonlines.gz   # infobox 原文（2 列，~8.4 MB）
+│   ├── manga/                           # 漫画 type=1（425,715 条）
+│   ├── music/                           # 音乐 type=3（101,575 条）
+│   ├── game/                            # 游戏 type=4（119,444 条）
+│   └── real/                            # 三次元 type=6（26,976 条）
+├── differences/                         # 差异摘要（每周对比，按类型分子目录）
+│   ├── anime/
+│   │   └── 2026-11-10_to_2026-11-17/
+│   │       ├── diff_report.html         # 差异报告（浏览器可读）
+│   │       ├── diff_summary.json        # 差异统计
+│   │       ├── type2_subject_*_added.jsonlines      # 新增条目
+│   │       ├── type2_subject_*_deleted.jsonlines    # 删除条目
+│   │       └── 差异数据_type2_*.html     # 差异可视化
+│   ├── manga/ ├── music/ ├── game/ └── real/        # 各自 2026-11-10_to_2026-11-17/
 ├── .gitattributes                       # `*.gz` 按二进制处理（不做行尾归一化/文本 diff）
 ├── LICENSE
 └── README.md
 ```
 
-> 文件名里的 `anime` 即表示**仅 type=2（动画）**，因此数据里不再输出 `type` 字段 ——
+> 子目录名（`anime` / `manga` / `music` / `game` / `real`）即表示条目类型，因此数据里不再输出 `type` 字段 ——
 > 它恒定且冗余，还容易与 BGM 插件里同名的「观看状态」（1=想看…5=抛弃）混淆。
+> 每类的 6 个分片都用各自标签作前缀（如 `manga.base.jsonlines.gz`），清单里的 `file` 只写文件名，
+> 插件按清单所在目录解析同目录下的分片 —— 因此数据挪到子目录**无需改插件逻辑**。
 >
 > 本仓库**只存放数据**（分片数据源与差异摘要），不存放任何处理脚本；
 > 流水线与运维脚本统一位于业务仓库 [`Archive/scripts/`](../Archive/scripts)。
@@ -129,7 +148,7 @@ Bangumi-Archive-Anime-Excel/
 
 ## 📊 数据文件说明
 
-### 1. `data/anime.*`（核心数据源）
+### 1. `data/anime/anime.*`（动画核心数据源）
 
 BGM 插件通过 raw URL 读取的动画数据，**按字段类别切成 6 片**；每片仍是「**表头 + 值数组**」两段式 JSON Lines 格式，再经 gzip 压缩。
 
@@ -140,12 +159,12 @@ BGM 插件通过 raw URL 读取的动画数据，**按字段类别切成 6 片**
 - **最近更新**：2026-11-17
 - **访问地址**：
   ```
-  https://raw.githubusercontent.com/awujiana/Bangumi-Archive-Anime-Excel/main/data/anime.manifest.json
+  https://raw.githubusercontent.com/awujiana/Bangumi-Archive-Excel/main/data/anime/anime.manifest.json
   ```
 
 > 上面的大小是**全部分片之和**；记录数是每片的行数（各片行数完全一致）。
 
-#### 分片清单 `data/anime.manifest.json`
+#### 分片清单 `data/anime/anime.manifest.json`
 
 插件**先读清单**再决定下载哪些片。清单只有 2 KB 出头，一次 GET 就能拿到全部分片的文件名、字段列表、字节数与 sha256 —— 不必靠 404 试探某个片存不存在。
 
@@ -189,7 +208,7 @@ BGM 插件通过 raw URL 读取的动画数据，**按字段类别切成 6 片**
 用法四步：
 
 1. **选片**：拿你需要的字段名与各片 `fields` 求交集，命中即下载该片（`base` 恒为必选）
-2. **下载**：`https://raw.githubusercontent.com/awujiana/Bangumi-Archive-Anime-Excel/main/data/` + `shard.file`
+2. **下载**：`https://raw.githubusercontent.com/awujiana/Bangumi-Archive-Excel/main/data/anime/` + `shard.file`
 3. **校验**：比对实际字节数与 `bytes`（更严格可再算 `sha256`）
 4. **拼接**：各片行序一致且都带 `sid`，按**行号**对齐合并即可
 
@@ -197,7 +216,7 @@ BGM 插件通过 raw URL 读取的动画数据，**按字段类别切成 6 片**
 import json
 import urllib.request
 
-BASE = "https://raw.githubusercontent.com/awujiana/Bangumi-Archive-Anime-Excel/main/data/"
+BASE = "https://raw.githubusercontent.com/awujiana/Bangumi-Archive-Excel/main/data/anime/"
 manifest = json.load(urllib.request.urlopen(BASE + "anime.manifest.json"))
 
 wanted = {"sid", "name", "date", "score", "rank"}          # 你的表格要用到的列
@@ -310,7 +329,7 @@ print([shard["file"] for shard in picked], sum(s["bytes"] for s in picked))
 一次把 6 片全部下下来（约 21 MiB），解压后按行号拼成完整记录：
 
 ```bash
-BASE=https://raw.githubusercontent.com/awujiana/Bangumi-Archive-Anime-Excel/main/data
+BASE=https://raw.githubusercontent.com/awujiana/Bangumi-Archive-Excel/main/data/anime
 mkdir -p bangumi-data && cd bangumi-data
 
 # 1) 取清单
@@ -356,7 +375,7 @@ print(len(rows), rows[0]["name"], rows[0]["date"])
 BGM 插件（浏览器 / Node 18+）走的是同一条链路，只是用原生 `DecompressionStream` 解压，不引第三方依赖：
 
 ```js
-const BASE = "https://raw.githubusercontent.com/awujiana/Bangumi-Archive-Anime-Excel/main/data/";
+const BASE = "https://raw.githubusercontent.com/awujiana/Bangumi-Archive-Excel/main/data/anime/";
 const manifest = await (await fetch(`${BASE}anime.manifest.json`)).json();
 
 const rows = Array.from({ length: manifest.recordCount }, () => ({}));
@@ -569,11 +588,11 @@ infobox字段包含条目原始wiki字符串，其中可能包含以下信息（
    - 执行 `step09_build_jsonl.py` 生成 6 个字段分片 `anime.<shard>.jsonlines.gz` + 清单 `anime.manifest.json`（各片为「表头 + 值数组」，gzip 压缩）；同时做**完播日推导**：infobox 未登记「播放结束」的条目，取 `type2_episode.jsonlines` 中该条目全部章节的最大 airdate 兜底
    - 执行 `step10_sync_diff.py` 同步差异摘要到本仓库
 3. **本仓库**由 Archive 项目的 `push_data_repository.py` 自动提交：
-   - 先执行 `Archive/scripts/update_badges.py`，把本 README 的徽章与统计信息对齐到最新的 `data/anime.manifest.json`
+   - 先执行 `Archive/scripts/update_badges.py`，把本 README 的徽章与统计信息对齐到最新的 `data/anime/anime.manifest.json`
    - 再 `git add` + `git commit` + `git push` 更新到 GitHub
-4. **BGM 插件**先拉 `data/anime.manifest.json`，按用户表头决定要哪些分片，再逐个下载并解压
+4. **BGM 插件**先拉 `data/anime/anime.manifest.json`，按用户表头决定要哪些分片，再逐个下载并解压
 
-> 本 README 中所有数字（记录数、大小、更新日期）均由业务仓库的 `Archive/scripts/update_badges.py` 从 `data/anime.manifest.json` 自动生成，无需手工维护。
+> 本 README 中所有数字（记录数、大小、更新日期）均由业务仓库的 `Archive/scripts/update_badges.py` 从 `data/anime/anime.manifest.json` 自动生成，无需手工维护。
 > 手动校验是否已对齐：`python scripts/update_badges.py --check`（在 Archive 仓库根目录执行，过期时退出码为 1）。
 
 ---
@@ -621,13 +640,13 @@ infobox字段包含条目原始wiki字符串，其中可能包含以下信息（
   <a href="https://github.com/topics/wps"><img alt="wps" src="https://img.shields.io/badge/wps-1f6feb?style=flat-square"></a>
 </p>
 
-> 以上为本仓库的 GitHub Topics（关联标签）；可在仓库首页 Topics 区或 `gh repo edit awujiana/Bangumi-Archive-Anime-Excel --add-topic "..."` 维护。
+> 以上为本仓库的 GitHub Topics（关联标签）；可在仓库首页 Topics 区或 `gh repo edit awujiana/Bangumi-Archive-Excel --add-topic "..."` 维护。
 
 ## 🔗 关联仓库
 
 | 仓库 | 说明 |
 |------|------|
-| [awujiana/Bangumi-Archive-Anime-Excel](https://github.com/awujiana/Bangumi-Archive-Anime-Excel) | 本仓库（数据下发） |
+| [awujiana/Bangumi-Archive-Excel](https://github.com/awujiana/Bangumi-Archive-Excel) | 本仓库（数据下发） |
 | [bangumi/Archive](https://github.com/bangumi/Archive) | 上游原始数据源 |
 | `../Archive`（本地） | 数据处理流水线，含 `scripts/` 下全部生成与推送脚本 |
 | [awujiana/My-Bangumi-Database-for-WPS](https://github.com/awujiana/My-Bangumi-Database-for-WPS) | WPS 加载项（插件端），读取 JSONL 并同步 Bangumi API |
