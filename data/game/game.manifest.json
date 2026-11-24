@@ -1,0 +1,99 @@
+{
+  "formatVersion": 1,
+  "subjectType": 4,
+  "typeLabel": "game",
+  "updatedAt": "2026-11-17",
+  "recordCount": 119444,
+  "shards": [
+    {
+      "name": "base",
+      "file": "game.base.jsonlines.gz",
+      "fields": [
+        "sid",
+        "name",
+        "name_original",
+        "updatedAt",
+        "date",
+        "meta_tags",
+        "nsfw"
+      ],
+      "bytes": 3769699,
+      "sha256": "3ab9f389725ccd75c3c9e7ed419ada98dd3353be03609f8950ff3532b97bfa18"
+    },
+    {
+      "name": "meta",
+      "file": "game.meta.jsonlines.gz",
+      "fields": [
+        "sid",
+        "播放结束",
+        "动画制作公司",
+        "话数",
+        "片长",
+        "制片国家",
+        "语言",
+        "类型",
+        "导演",
+        "音乐",
+        "人物设定",
+        "机械设定",
+        "原作",
+        "脚本",
+        "分镜",
+        "演出",
+        "原案",
+        "系列构成",
+        "在线播放平台",
+        "别名"
+      ],
+      "bytes": 1544633,
+      "sha256": "6e2d19031afc09a5f19f0df0c765e7179ca61e3b7e2795fa487fb7c813890008"
+    },
+    {
+      "name": "relations",
+      "file": "game.relations.jsonlines.gz",
+      "fields": [
+        "sid",
+        "关联条目ID",
+        "关联的动漫ID"
+      ],
+      "bytes": 709216,
+      "sha256": "949f29b7ce9625921bb114a18551a6662b87d9932997cc1c3ae3bda5670c109e"
+    },
+    {
+      "name": "stats",
+      "file": "game.stats.jsonlines.gz",
+      "fields": [
+        "sid",
+        "platform",
+        "series",
+        "score",
+        "rank",
+        "score_details",
+        "favorite",
+        "tags"
+      ],
+      "bytes": 2558960,
+      "sha256": "643d31b84f8a722b651e6415a51fc3281345d8e5188ba1e032e8efbc8f278cfa"
+    },
+    {
+      "name": "summary",
+      "file": "game.summary.jsonlines.gz",
+      "fields": [
+        "sid",
+        "summary"
+      ],
+      "bytes": 47074041,
+      "sha256": "099853e9dce9d7776fce1fe1bbed2729d68a9108104a9c69e4c799000cd472b6"
+    },
+    {
+      "name": "infobox",
+      "file": "game.infobox.jsonlines.gz",
+      "fields": [
+        "sid",
+        "infobox"
+      ],
+      "bytes": 9597346,
+      "sha256": "aadd47e8d7f911ffac454125185b12b6e4c57c99830752009fce5aa7271b63ff"
+    }
+  ]
+}
