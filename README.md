@@ -686,6 +686,7 @@ infobox字段包含条目原始wiki字符串，其中可能包含以下信息（
 | [bangumi/Archive](https://github.com/bangumi/Archive) | 上游原始数据源 |
 | `../Archive`（本地） | 数据处理流水线，含 `scripts/` 下全部生成与推送脚本 |
 | [awujiana/My-Bangumi-Database-for-WPS](https://github.com/awujiana/My-Bangumi-Database-for-WPS) | WPS 加载项（插件端），读取 JSONL 并同步 Bangumi API |
+| [awujiana/Bangumi-Multitag](https://github.com/awujiana/Bangumi-Multitag) | 五类型多标签检索站点（[在线访问](https://awujiana.github.io/Bangumi-Multitag/)），直接读取本仓库 raw 分片 |
 
 <a id="sec-11"></a>
 
