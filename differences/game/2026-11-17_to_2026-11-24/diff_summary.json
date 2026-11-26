@@ -1,36 +1,36 @@
 {
-  "comparison_date": "2026-11-26 12:48:09",
+  "comparison_date": "2026-11-26 14:03:35",
   "comparison_period": "26年11月24日对比26年11月17日",
   "old_date": "26年11月17日",
   "new_date": "26年11月24日",
   "file_results": {
-    "type6_subject": {
-      "old_count": 26976,
-      "new_count": 27083,
-      "added_count": 108,
-      "deleted_count": 1,
-      "modified_count": 3882,
-      "net_change": 107
+    "type3_subject": {
+      "old_count": 101575,
+      "new_count": 101822,
+      "added_count": 247,
+      "deleted_count": 0,
+      "modified_count": 16328,
+      "net_change": 247
     },
-    "type6_subject-relations": {
-      "old_count": 42334,
-      "new_count": 42477,
-      "added_count": 146,
-      "deleted_count": 3,
-      "modified_count": 56,
-      "net_change": 143
+    "type3_subject-relations": {
+      "old_count": 114760,
+      "new_count": 114993,
+      "added_count": 233,
+      "deleted_count": 0,
+      "modified_count": 18,
+      "net_change": 233
     },
-    "type6_episode": {
-      "old_count": 315323,
-      "new_count": 316264,
-      "added_count": 942,
-      "deleted_count": 1,
-      "modified_count": 92,
-      "net_change": 941
+    "type3_episode": {
+      "old_count": 1044701,
+      "new_count": 1047593,
+      "added_count": 2892,
+      "deleted_count": 0,
+      "modified_count": 54,
+      "net_change": 2892
     }
   },
-  "total_added": 1196,
-  "total_deleted": 5,
-  "total_modified": 4030,
-  "net_change": 1191
+  "total_added": 3372,
+  "total_deleted": 0,
+  "total_modified": 16400,
+  "net_change": 3372
 }
