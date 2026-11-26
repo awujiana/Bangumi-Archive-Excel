@@ -54,10 +54,11 @@
       "fields": [
         "sid",
         "关联条目ID",
-        "关联的动漫ID"
+        "关联的动漫ID",
+        "关联关系"
       ],
-      "bytes": 412779,
-      "sha256": "586691ac40ea445471a883541e04d883e04fc2a5a746aef34f6c0b8a262e2b08"
+      "bytes": 721937,
+      "sha256": "57f746bcedffe8a0b36d66f8a99af104169ef0bf7fe2339e4aedb04b8267d7c0"
     },
     {
       "name": "stats",

@@ -11,7 +11,7 @@
 <!-- BADGE:manga -->
 [![manga records](https://img.shields.io/badge/manga%20records-426672-8250df.svg)](data/manga/manga.manifest.json)
 [![manga updated](https://img.shields.io/badge/manga%20updated-2026--11--24-8250df.svg)](data/manga/manga.manifest.json)
-[![manga size](https://img.shields.io/badge/manga%20size-125MB-8250df.svg)](data/manga/manga.manifest.json)
+[![manga size](https://img.shields.io/badge/manga%20size-127MB-8250df.svg)](data/manga/manga.manifest.json)
 <!-- /BADGE:manga -->
 
 <!-- BADGE:anime -->
@@ -35,7 +35,7 @@
 <!-- BADGE:real -->
 [![real records](https://img.shields.io/badge/real%20records-27083-1a7f37.svg)](data/real/real.manifest.json)
 [![real updated](https://img.shields.io/badge/real%20updated-2026--11--24-1a7f37.svg)](data/real/real.manifest.json)
-[![real size](https://img.shields.io/badge/real%20size-16MB-1a7f37.svg)](data/real/real.manifest.json)
+[![real size](https://img.shields.io/badge/real%20size-17MB-1a7f37.svg)](data/real/real.manifest.json)
 <!-- /BADGE:real -->
 
 <h1>Bangumi 全类型存档数据</h1>
@@ -188,7 +188,7 @@ Bangumi-Archive-Excel/
 
 BGM 插件通过 raw URL 读取的动画数据，**按字段类别切成 6 片**；每片仍是「**表头 + 值数组**」两段式 JSON Lines 格式，再经 gzip 压缩。
 
-- **大小**：约 16 MB（17,200,434 字节，解压后 51.01 MiB）
+- **大小**：约 17 MB（17,336,426 字节，解压后 51.49 MiB）
 - **记录数**：27083 条
 - **编码**：UTF-8 无 BOM，LF 换行
 - **更新频率**：每周三（跟随 Bangumi 官方 dump 节奏）
