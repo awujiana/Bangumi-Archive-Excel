@@ -2,8 +2,8 @@
   "formatVersion": 1,
   "subjectType": 1,
   "typeLabel": "manga",
-  "updatedAt": "2026-11-17",
-  "recordCount": 425715,
+  "updatedAt": "2026-11-24",
+  "recordCount": 426672,
   "shards": [
     {
       "name": "base",
@@ -17,8 +17,8 @@
         "meta_tags",
         "nsfw"
       ],
-      "bytes": 11532378,
-      "sha256": "bb406d9ccbde90787e73953159b47162aa9a50fe51d7a3c43aaab205c3a684d9"
+      "bytes": 11515179,
+      "sha256": "acb69871f03a41e93c7a94399bb68d113a82eb32db9749f6215254b58c54ec9e"
     },
     {
       "name": "meta",
@@ -45,8 +45,8 @@
         "在线播放平台",
         "别名"
       ],
-      "bytes": 3706542,
-      "sha256": "c8f65f8829af62fa617e83035345e71eb4fe174bea7c8fe3bd8d44e77245fdd0"
+      "bytes": 3695354,
+      "sha256": "88ab94a4f6d463eeb79ac519e5f0f04da3b8f91244242baf7fc86bf5cdb6adb0"
     },
     {
       "name": "relations",
@@ -56,8 +56,8 @@
         "关联条目ID",
         "关联的动漫ID"
       ],
-      "bytes": 3049740,
-      "sha256": "8a761c52fb55d7473bf78c9755081025660e344cce66bb56cf67d3e2819d56b7"
+      "bytes": 3091134,
+      "sha256": "0ac24cbb7b87e86ca2598c44e1d3f51e9f28992b8e7ee850bd5bbf81e928d5cb"
     },
     {
       "name": "stats",
@@ -72,8 +72,8 @@
         "favorite",
         "tags"
       ],
-      "bytes": 5394204,
-      "sha256": "231c6cd37c59a5349f379d7b79b74c257cf828334a060df0268754f97bdb5095"
+      "bytes": 5394074,
+      "sha256": "d70085c54dfeaf0f74cc800eb38461414860dcced8cedcb88b70212215262d3a"
     },
     {
       "name": "summary",
@@ -82,8 +82,8 @@
         "sid",
         "summary"
       ],
-      "bytes": 85808264,
-      "sha256": "38ac8a403933d4973d71640ded1d6e1dbae8ea679062e33ddc63c053ccc3676d"
+      "bytes": 85647504,
+      "sha256": "76d277cd6271387b0ac88711beaf79f0abf1c321953c7d12e4d99dacdda29efd"
     },
     {
       "name": "infobox",
@@ -92,8 +92,8 @@
         "sid",
         "infobox"
       ],
-      "bytes": 21992252,
-      "sha256": "be524363adf4ff38e3cedd0f94a33abd93ac74e9d631b92decb28b2c64715a88"
+      "bytes": 22007083,
+      "sha256": "4c10d5114d1f9ffabcd6f7068db90189167940432bcc190c4e67cb80f5b39fb0"
     }
   ]
 }

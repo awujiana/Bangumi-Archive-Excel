@@ -9,32 +9,32 @@
 [![Stars](https://img.shields.io/github/stars/awujiana/Bangumi-Archive-Excel?label=Stars&color=2da44e)](https://github.com/awujiana/Bangumi-Archive-Excel/stargazers)
 
 <!-- BADGE:manga -->
-[![manga records](https://img.shields.io/badge/manga%20records-425715-8250df.svg)](data/manga/manga.manifest.json)
-[![manga updated](https://img.shields.io/badge/manga%20updated-2026--11--17-8250df.svg)](data/manga/manga.manifest.json)
+[![manga records](https://img.shields.io/badge/manga%20records-426672-8250df.svg)](data/manga/manga.manifest.json)
+[![manga updated](https://img.shields.io/badge/manga%20updated-2026--11--24-8250df.svg)](data/manga/manga.manifest.json)
 [![manga size](https://img.shields.io/badge/manga%20size-125MB-8250df.svg)](data/manga/manga.manifest.json)
 <!-- /BADGE:manga -->
 
 <!-- BADGE:anime -->
-[![anime records](https://img.shields.io/badge/anime%20records-31312-1f6feb.svg)](data/anime/anime.manifest.json)
-[![anime updated](https://img.shields.io/badge/anime%20updated-2026--11--17-1f6feb.svg)](data/anime/anime.manifest.json)
+[![anime records](https://img.shields.io/badge/anime%20records-31431-1f6feb.svg)](data/anime/anime.manifest.json)
+[![anime updated](https://img.shields.io/badge/anime%20updated-2026--11--24-1f6feb.svg)](data/anime/anime.manifest.json)
 [![anime size](https://img.shields.io/badge/anime%20size-22MB-1f6feb.svg)](data/anime/anime.manifest.json)
 <!-- /BADGE:anime -->
 
 <!-- BADGE:music -->
-[![music records](https://img.shields.io/badge/music%20records-101575-bf8700.svg)](data/music/music.manifest.json)
-[![music updated](https://img.shields.io/badge/music%20updated-2026--11--17-bf8700.svg)](data/music/music.manifest.json)
+[![music records](https://img.shields.io/badge/music%20records-101822-bf8700.svg)](data/music/music.manifest.json)
+[![music updated](https://img.shields.io/badge/music%20updated-2026--11--24-bf8700.svg)](data/music/music.manifest.json)
 [![music size](https://img.shields.io/badge/music%20size-28MB-bf8700.svg)](data/music/music.manifest.json)
 <!-- /BADGE:music -->
 
 <!-- BADGE:game -->
-[![game records](https://img.shields.io/badge/game%20records-119444-d29922.svg)](data/game/game.manifest.json)
-[![game updated](https://img.shields.io/badge/game%20updated-2026--11--17-d29922.svg)](data/game/game.manifest.json)
-[![game size](https://img.shields.io/badge/game%20size-62MB-d29922.svg)](data/game/game.manifest.json)
+[![game records](https://img.shields.io/badge/game%20records-130518-d29922.svg)](data/game/game.manifest.json)
+[![game updated](https://img.shields.io/badge/game%20updated-2026--11--24-d29922.svg)](data/game/game.manifest.json)
+[![game size](https://img.shields.io/badge/game%20size-68MB-d29922.svg)](data/game/game.manifest.json)
 <!-- /BADGE:game -->
 
 <!-- BADGE:real -->
-[![real records](https://img.shields.io/badge/real%20records-26976-1a7f37.svg)](data/real/real.manifest.json)
-[![real updated](https://img.shields.io/badge/real%20updated-2026--11--17-1a7f37.svg)](data/real/real.manifest.json)
+[![real records](https://img.shields.io/badge/real%20records-27083-1a7f37.svg)](data/real/real.manifest.json)
+[![real updated](https://img.shields.io/badge/real%20updated-2026--11--24-1a7f37.svg)](data/real/real.manifest.json)
 [![real size](https://img.shields.io/badge/real%20size-16MB-1a7f37.svg)](data/real/real.manifest.json)
 <!-- /BADGE:real -->
 
@@ -188,11 +188,11 @@ Bangumi-Archive-Excel/
 
 BGM 插件通过 raw URL 读取的动画数据，**按字段类别切成 6 片**；每片仍是「**表头 + 值数组**」两段式 JSON Lines 格式，再经 gzip 压缩。
 
-- **大小**：约 22 MB（22,920,566 字节，解压后 59.38 MiB）
-- **记录数**：31312 条
+- **大小**：约 125 MB（131,350,328 字节，解压后 488.87 MiB）
+- **记录数**：426672 条
 - **编码**：UTF-8 无 BOM，LF 换行
 - **更新频率**：每周三（跟随 Bangumi 官方 dump 节奏）
-- **最近更新**：2026-11-17
+- **最近更新**：2026-11-24
 - **访问地址**：
   ```
   https://raw.githubusercontent.com/awujiana/Bangumi-Archive-Excel/main/data/anime/anime.manifest.json
