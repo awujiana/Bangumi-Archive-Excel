@@ -19,6 +19,7 @@
 | `data/*.jsonlines.gz` | 6 个字段分片（base / infobox / meta / relations / stats / summary） | ✅ |
 | `xlsx/*.xlsx` | 主数据（75 列）与模板（42 列）Excel | ✅ |
 | `differences/` | 相邻期次差异摘要 | ✅ |
+| `tests/` | 合并发行版附件清单与文档同步的单元测试（`npm test`） | ✅ |
 | `README.md` / `CONTRIBUTING.md` / `AGENTS.md` / `CHANGELOG.md` | 文档 | ✅ |
 | `LICENSE` | CC BY-SA 4.0 说明 | ✅ |
 
@@ -42,6 +43,7 @@
 
 - 改分片 / 清单：核对 `anime.manifest.json` 的 `bytes` / `sha256` / 记录数与实际分片一致。
 - 改 Excel：确认 75 列主数据与 42 列模板的字段映射未漂移。
+- 改发行版 / 文档：运行 `npm test`，校验合并发行版 15 个附件清单与 README / CHANGELOG 同步。
 - 改文档：同步 `CHANGELOG.md`。
 - 提交：`git status` 确认不含临时文件。
 

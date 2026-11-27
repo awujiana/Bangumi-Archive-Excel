@@ -1,0 +1,10 @@
+{
+  "name": "bangumi-archive-excel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bangumi 全类型存档数据下发仓库：合并发行版附件与文档同步校验",
+  "license": "CC-BY-SA-4.0",
+  "scripts": {
+    "test": "node --test"
+  }
+}
